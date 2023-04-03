@@ -136,15 +136,25 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="footer-chat d-flex align-items-center custom-bg-grey p-2">
-                        <span class="footer-left d-flex align-items-center justify-content-center"><i class="fa-regular fa-face-smile fs-4 text-secondary"></i></span>
-                        <span class="footer-center d-flex py-1"><input type="text" placeholder="Scrivi un messaggio" class="w-100 border-0 rounded-1 px-2" v-model.trim="newMessage" @keyup.enter="sentMessage"></span>
-                        <span class="footer-right d-flex align-items-center justify-content-center"><i class="fa-solid fa-microphone fs-4 text-secondary"></i></span>
+                    <!--Footer-->
+                    <div class="footer-chat d-flex align-items-center
+                        custom-bg-grey p-2">
+                        <span class="footer-left d-flex align-items-center
+                            justify-content-center"><i class="fa-regular
+                                fa-face-smile fs-4 text-secondary"></i></span>
+                        <span class="footer-center d-flex py-1"><input
+                                type="text" placeholder="Scrivi un messaggio"
+                                class="w-100 border-0 rounded-1 px-2"
+                                v-model.trim="newMessage"
+                                @keyup.enter="sentMessage"></span>
+                        <span class="footer-right d-flex align-items-center
+                            justify-content-center"><i class="fa-solid
+                                fa-microphone fs-4 text-secondary"></i></span>
                     </div>
                 </div>
-                
+
             </div>
-            
+
 
 
 

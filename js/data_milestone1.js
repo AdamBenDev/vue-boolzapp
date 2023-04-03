@@ -17,7 +17,7 @@ const data = {
         avatar: '_3',
       },
       {
-        name: 'Luisa',
+        name: 'AlessandroB.',
         avatar: '_4',
       },
     ]

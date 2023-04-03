@@ -1,0 +1,27 @@
+body{
+    background-image: linear-gradient(0deg, #DADBD4 85%, #009688 15%);
+}
+
+#root {
+    padding: 20px 0;
+}
+
+/* Generics  */
+i {
+    color: #B1B1B1;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/*UTILS*/
+
+.circle {
+    height: 60px;
+    width: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+}

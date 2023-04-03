@@ -26,19 +26,69 @@
             <!--LEFT COLUMN-->
             <div class="list-structure col-4 h-100 p-0">
                 <!--HEADER SIDE-->
-                <div class="px-3 d-flex align-items-center
+                <header class="px-3 d-flex align-items-center
                     justify-content-between">
                     <!--USER-->
                     <div class="d-flex align-items-center">
                         <div class="circle">
-                            <img :src=`img/avatar${user.avatar}.jpg` :alt="user.name">
+                            <img :src=`img/avatar${user.avatar}.jpg`
+                                :alt="user.name">
 
                         </div>
                         <span class="ps-1">{{ user.name }}</span>
 
+
+                    </div>
+                    <ul class="d-flex align-items-center m-0">
+                        <li>
+                            <i class="fa-solid fa-circle-notch fs-4 px-2"></i>
+                            <i class="fa-solid fa-message fs-4 px-2"></i>
+                            <i class="fa-solid fa-ellipsis-vertical fs-4 px-2"></i>
+                        </li>
+                    </ul>
+                </header>
+                <!--UNDER HEADER SIDE-->
+                <div class="under-header">
+                    <div class="notifications px-3">
+                        <div class="d-flex align-items-center h-100">
+                            <div class="circle me-3">
+                                <i class="fa-solid fa-bell-slash fs-4 d-block
+                                    text-center"></i>
+                            </div>
+                            <div>
+                                <div class="lh-sm">Ricevi notifiche di nuovi
+                                    messaggi</div>
+                                <div class="active-notifies text-secondary lh-sm
+                                    text-decoration-underline fs-small-custom">Attiva
+                                    notifiche desktop</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <!-- Main Side -->
+                <main>
+                    <div v-for="(contact, i) in contacts"
+                        @click="changeCurrentIndex(i)" class="chat-list d-flex
+                        align-items-start px-3 py-2 mb-1">
+                        <div v-if="contact.visible" class="circle bigger">
+                            <img :src=`img/avatar${contact.avatar}.jpg`
+                                :alt="contact.avatar">
+                        </div>
+                        <div v-if="contact.visible" class="ps-3">
+                            <span>{{contact.name}}</span>
+                            <div>
+                                <div class="preview-message text-secondary pb-1
+                                    pt-1">{{
+                                    contact.messages[getLastIndex(i)].text }}</div>
+                                <div class="preview-date text-secondary">{{
+                                    contact.messages[getLastIndex(i)].date }}</div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
             </div>
+
+            
         </div>
 
 
@@ -46,6 +96,6 @@
 
 
 
-        <script src="./main.js"></script>
+        <script src="./js/script.js"></script>
     </body>
 </html>

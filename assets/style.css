@@ -57,20 +57,51 @@ ul {
     cursor: pointer;
 }
 
-.fa-caret-down{
-    display: flex;
+.sent{
+    background-color: #D5F9BA;
+    align-self: flex-end;
 }
 
-.dropdown {
-    background-color: white;
-    width: 150px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 14px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    position: relative;
-    bottom: 20px;
-    left: calc(100% - 150px);
+.received{
+    background-color: #fff;
 }
+
+.text-message {
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+.date-message {
+    font-size: 10px;
+    color: grey;
+    text-align: right;
+}
+
+/* Left Column */
+
+.list-structure header {
+    height: 80px;
+    background-color: #EAEAEA;
+}
+
+.list-structure .under-header{
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.under-header .notifications {
+    height: 80px;
+    background-color: #8EDAFC;
+}
+
+.notifications i {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    color: #8EDAFC;
+}
+
+
 

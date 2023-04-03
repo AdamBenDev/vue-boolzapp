@@ -187,6 +187,21 @@ const app = Vue.createApp({
       return this.contacts[index].messages.length - 1;
     },
 
+    
+      // funzione che aggiunge un nuovo messaggio alla chat
+      sentMessage(){
+        if(!this.newMessage) return;
+
+        const message = {
+            date: this.getCurrentMoment(),
+            text: this.newMessage,
+            status: 'sent'
+        }
+        this.contacts[this.currentIndex].messages.push(message);
+        this.clearInput();
+        this.receivedMessage();
+      },
+
     // Funzione che pulisce l'input
     clearInput() {
       this.newMessage = "";

@@ -212,6 +212,17 @@ const app = Vue.createApp({
     getCurrentMoment() {
       return new Date().toLocaleString();
     },
+
+      // Funzione che imposta il toggle
+      toggleDropdown(index) {
+        this.dropdownIndex = index;
+  
+        if(this.dropdownDisplay) {
+          this.dropdownDisplay = false;
+        } else {
+          this.dropdownDisplay = true;
+        }
+      },
   },
 });
 

@@ -110,10 +110,12 @@
                             <div :class="message.status" class="message">
                                 <div class="d-flex justify-content-between">
                                     <div class="text-message">{{ message.text }}</div>
-                                    
+                                    <i @click="toggleDropdown(index)" class="fa-solid fa-caret-down fs-5"></i>
+
                                 </div>
                                 <div class="date-message">{{ message.date }}</div>
-                               
+                                <li @click="deleteMessage(index)">Delete message</li>
+
                             </div>
                         </div>
                     </div>

@@ -246,6 +246,15 @@ const app = Vue.createApp({
     hideDropdown() {
       this.dropdownDisplay = false;
     },
+
+    // Funzione che filtra la chat utilizzando l'oggetto visible
+    filterChat() {
+      this.contacts.forEach((contact) => {
+        contact.visible = contact.name
+          .toLowerCase()
+          .includes(this.searchChat.toLowerCase());
+      });
+    },
   },
 });
 
